@@ -1,0 +1,17 @@
+#p{
+    width:80%;
+    margin-left:10%;
+    margin-top:10%;
+    border: 0.5px;
+    border-color: black;
+    border-style: solid;
+    padding: 1%;
+}
+#p7{
+    position: relative;
+    width:1000px;
+    background-color: aquamarine;
+}
+#Boxx{
+    float: left;
+}

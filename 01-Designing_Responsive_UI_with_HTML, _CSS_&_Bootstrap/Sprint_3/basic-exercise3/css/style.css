@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 4px;
+}
+.container{ 
+    margin: 0 100px; 
+    
+}
+.header{
+    
+    background-color: rgb(219, 20, 20);
+     background-image: linear-gradient(brown ,rgb(243, 38, 38) ,); 
+    height:150px;
+   
+}
+.logo img{
+    height: 130px;
+    width: 180px;
+}
+ .right_header{
+    padding-top: 30px;
+    position: absolute;
+    right: 110px;
+    top: 0;
+}
+.rightheader a{
+    color: white;
+    text-decoration: none;
+} 
+.header  ul{
+    background-color: brown;
+    list-style-type: none;
+    overflow: hidden;
+}
+.header li{
+    float: left;
+}
+.header li a{
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+.header li a:hover{
+    color: green;
+}
+   h1{
+    color: rgb(84, 3, 3);
+    font-style: italic;
+ }
+  .row{
+      display: flex;
+      flex-flow: column;
+  }
+  .row .b{
+      display: flex;
+      flex-flow: row;
+
+  }
+  .row column{
+      height: 200px;
+      width: 200px;
+  }
+ .row .wrapper .sidebar{
+	
+    background-color: white;
+    float: right;
+    height:100vh;
+    overflow: hidden;
+	position: fixed;
+    right:120px;
+	top: 14rem;
+	width: 20%;
+    z-index: 1;
+}
+
+.wrapper .sidebar ul li a{
+    background-color: brown;
+    color: rgb(241, 237, 237);
+	display: block;
+    font-size: 16px;
+    padding-bottom: 5px;
+	position: relative;
+}
+.wrapper .sidebar ul li a:hover{
+    color: green;
+}
+footer{
+    background-color:brown;
+    bottom: 0;
+    color: white;
+    left:10;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:10px;
+    position: static;
+    text-align: center;
+    top: 0; 
+}

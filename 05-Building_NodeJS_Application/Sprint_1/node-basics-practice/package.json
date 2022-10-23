@@ -1,0 +1,19 @@
+{
+  "name": "basics-practice",
+  "version": "1.0.0",
+  "description": "Refer the PROBLEM.md file for the problem description.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab-wipro.stackroute.in:2225/nitinmagdum111/node-basics-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

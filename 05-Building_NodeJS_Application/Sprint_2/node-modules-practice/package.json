@@ -1,0 +1,23 @@
+{
+  "name": "modules-practice",
+  "version": "1.0.0",
+  "description": "Refer the PROBLEM.md file for the problem description.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab-wipro.stackroute.in:2225/nitinmagdum111/node-modules-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash-arithmetic": "^1.0.0",
+    "lodash.add": "^3.7.0",
+    "lodash.divide": "^4.9.0",
+    "nodemon": "^2.0.19"
+  }
+}

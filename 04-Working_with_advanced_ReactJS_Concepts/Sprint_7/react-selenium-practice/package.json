@@ -1,0 +1,20 @@
+{
+  "name": "react-selenium-practice",
+  "version": "1.0.0",
+  "description": "Refer the PROBLEM.md file for the problem description.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e": ".\\node_modules\\.bin\\cypress open"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab-wipro.stackroute.in:2225/nitinmagdum111/react-selenium-practice.git"
+  },
+  "author": "Nitin",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^10.4.0"
+  }
+}

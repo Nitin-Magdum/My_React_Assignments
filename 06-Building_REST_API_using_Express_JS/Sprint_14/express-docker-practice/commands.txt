@@ -1,0 +1,53 @@
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker build . -t sample
+[+] Building 4.8s (10/10) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                       0.0s
+ => => transferring dockerfile: 31B                                                                                                        0.0s
+ => [internal] load .dockerignore                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                            0.0s
+ => [internal] load metadata for docker.io/library/node:15                                                                                 4.5s
+ => [1/5] FROM docker.io/library/node:15@sha256:608bba799613b1ebf754034ae008849ba51e88b23271412427b76d60ae0d0627                           0.0s
+ => [internal] load build context                                                                                                          0.1s
+ => => transferring context: 29.56kB                                                                                                       0.0s
+ => CACHED [2/5] WORKDIR /app                                                                                                              0.0s
+ => CACHED [3/5] COPY package.json .                                                                                                       0.0s
+ => CACHED [4/5] RUN npm install                                                                                                           0.0s
+ => CACHED [5/5] COPY . ./                                                                                                                 0.0s
+ => exporting to image                                                                                                                     0.1s
+ => => exporting layers                                                                                                                    0.0s
+ => => writing image sha256:6c97613b6c12bf17e94da77d1d32a3bbe9db3aa4d50db05a369e724fb98f71e5                                               0.0s
+ => => naming to docker.io/library/sample                                                                                                  0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker run -p 3000:3000 -d --name app app
+Unable to find image 'app:latest' locally
+^C
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker run -p 3000:3000 -d --name app sample
+0e9452e6bb267902e5142f848ae5a7e534866b1a198db6d3f80a43870c1d8e2e
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker images
+REPOSITORY       TAG       IMAGE ID       CREATED         SIZE
+sample           latest    6c97613b6c12   8 minutes ago   944MB
+node-app-image   latest    13416dc7083e   3 weeks ago     944MB
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker stop 6c97613b6c12
+Error response from daemon: No such container: 6c97613b6c12
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker stop 6c97613b6c12  -f
+unknown shorthand flag: 'f' in -f
+See 'docker stop --help'.
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker stop 6c97613b6c12 -f
+unknown shorthand flag: 'f' in -f
+See 'docker stop --help'.
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker images
+REPOSITORY       TAG       IMAGE ID       CREATED          SIZE
+sample           latest    6c97613b6c12   10 minutes ago   944MB
+node-app-image   latest    13416dc7083e   3 weeks ago      944MB
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>docker stop 0e9452e6bb267902e5142f848ae5a7e534866b1a198db6d3f80a43870c1d8e2e
+0e9452e6bb267902e5142f848ae5a7e534866b1a198db6d3f80a43870c1d8e2e
+
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_14\express-docker-practice>

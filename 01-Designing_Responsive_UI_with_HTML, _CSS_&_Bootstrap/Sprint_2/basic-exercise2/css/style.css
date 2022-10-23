@@ -1,0 +1,31 @@
+.container {
+    border: 1px solid black;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.logo {
+    height: 150px;
+    width: 240px;
+}
+.headings {
+    font-family: Monotype Corsiva;
+    font-size: 18pt;
+    text-align: center;
+}
+.footer {
+    background-color: rgb(48, 48, 153);
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+.footerclass  {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 11vh;
+    text-align: center;
+   
+}

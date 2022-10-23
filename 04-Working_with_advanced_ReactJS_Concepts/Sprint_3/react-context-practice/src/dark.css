@@ -1,0 +1,16 @@
+.dark-content {
+  color: lightblue;
+}
+button.buttonClass {
+  background-color: darkgray;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  box-shadow: 2px 2px lightblue;
+  border-radius: 5px 5px;
+}
+.inputClass {
+  background-color: #d1d1d1;
+}
+/* .card {
+  background-color: black;
+} */

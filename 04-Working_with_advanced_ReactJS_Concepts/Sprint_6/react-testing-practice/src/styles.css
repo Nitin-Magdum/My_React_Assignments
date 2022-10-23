@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.form {
+  margin-left: 550px;
+  margin-top: 30px;
+  border: 1px solid gray;
+  width: fit-content;
+}
+.form .btn-Next {
+  margin-left: 400px;
+  padding: 7px;
+  background-color: rgb(80, 80, 224);
+  color: white;
+}
+.form h1 {
+  text-align: center;
+}
+.error {
+  color: red;
+}

@@ -1,0 +1,226 @@
+D:\Wipro_Codes\06-Building_REST_API_using_Express_JS\Sprint_5\mongo-operations-practice>mongo
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("dfa50652-0335-44c8-a1de-99bb85e5b377") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2022-08-01T13:58:44.353+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> db.createCollection("operate")
+{ "ok" : 1 }
+> db.operate.insert({
+...     enrollno: "110470116021",
+...     name: "Krunal Lathiya",
+...         college: "VVP Engineering College",
+...     course: {
+...         courseName: "BE IT",
+...         duration: "4 Years"
+...     },
+...     address: {
+...         city: "Rajkot",
+...         state: "Gujarat",
+...         country: "India"
+...     }
+... })
+WriteResult({ "nInserted" : 1 })
+> db.operate.find().pretty()
+{
+        "_id" : ObjectId("62e92ddf1e18e8be2aac8b1e"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+> db.operate.insertMany([{
+...     enrollno: "110470116021",
+...     name: "Krunal Lathiya",
+...   college: "VVP Engineering College",
+...     course: {
+...         courseName: "BE IT",
+...         duration: "4 Years"
+...     },
+...     address: {
+...         city: "Rajkot",
+...         state: "Gujarat",
+...         country: "India"
+...     }
+... },{
+...   enrollno: "110470116022",
+...     name: "Rushikesh Vekariya",
+...   college: "VVP Engineering College",
+...     course: {
+...         courseName: "BE IT",
+...         duration: "4 Years"
+...     },
+...     address: {
+...         city: "Rajkot",
+...         state: "Gujarat",
+...         country: "India"
+...     }
+... }])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62e92df61e18e8be2aac8b1f"),
+                ObjectId("62e92df61e18e8be2aac8b20")
+        ]
+}
+> db.operate.find().pretty()
+{
+        "_id" : ObjectId("62e92ddf1e18e8be2aac8b1e"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+{
+        "_id" : ObjectId("62e92df61e18e8be2aac8b1f"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+{
+        "_id" : ObjectId("62e92df61e18e8be2aac8b20"),
+        "enrollno" : "110470116022",
+        "name" : "Rushikesh Vekariya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+> db.collection.find()
+> db.operate.find().limit(2)
+{ "_id" : ObjectId("62e92ddf1e18e8be2aac8b1e"), "enrollno" : "110470116021", "name" : "Krunal Lathiya", "college" : "VVP Engineering College", "course" : { "courseName" : "BE IT", "duration" : "4 Years" }, "address" : { "city" : "Rajkot", "state" : "Gujarat", "country" : "India" } }
+{ "_id" : ObjectId("62e92df61e18e8be2aac8b1f"), "enrollno" : "110470116021", "name" : "Krunal Lathiya", "college" : "VVP Engineering College", "course" : { "courseName" : "BE IT", "duration" : "4 Years" }, "address" : { "city" : "Rajkot", "state" : "Gujarat", "country" : "India" } }
+> db.operate.find().limit(2).pretty()
+{
+        "_id" : ObjectId("62e92ddf1e18e8be2aac8b1e"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+{
+        "_id" : ObjectId("62e92df61e18e8be2aac8b1f"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+> db.operate.updateOne(
+...   { name: "Rushikesh Vekariya" },
+...   {
+...     $set: {college: "Marwadi"}
+...   }
+... )
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+> db.operate.updateMany(
+...   { name: "Krunal Lathiya" },
+...   {
+...     $set: {city: "Jetpur"}
+...   }
+... )
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.operate.deleteOne(
+...   { name : "Krunal Lathiya" }
+... )
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.operate.find().limit(2).pretty()
+{
+        "_id" : ObjectId("62e92df61e18e8be2aac8b1f"),
+        "enrollno" : "110470116021",
+        "name" : "Krunal Lathiya",
+        "college" : "VVP Engineering College",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        },
+        "city" : "Jetpur"
+}
+{
+        "_id" : ObjectId("62e92df61e18e8be2aac8b20"),
+        "enrollno" : "110470116022",
+        "name" : "Rushikesh Vekariya",
+        "college" : "Marwadi",
+        "course" : {
+                "courseName" : "BE IT",
+                "duration" : "4 Years"
+        },
+        "address" : {
+                "city" : "Rajkot",
+                "state" : "Gujarat",
+                "country" : "India"
+        }
+}
+>

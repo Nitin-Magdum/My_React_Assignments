@@ -1,0 +1,42 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Avengers Age of Ultron",
+      "overview": "Science Friction Movie",
+      "posterPath": "../Images/avengers_age_of_ultron.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Avengers: Endgame",
+      "overview": "Biggest MOvie in the wolrd",
+      "posterPath": "../images/avengers_endgame.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Avengers infinity war",
+      "overview": "Directed by Anthony Russo; Joe Russo ",
+      "posterPath": "../images/avengers_infinity_war.jpg"
+    }
+  ],
+  "favourites": [
+    {
+      "id": 2,
+      "title": "Avengers: Endgame",
+      "overview": "Biggest MOvie in the wolrd",
+      "posterPath": "../images/avengers_endgame.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Avengers Age of Ultron",
+      "overview": "Science Friction Movie",
+      "posterPath": "../Images/avengers_age_of_ultron.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Avengers infinity war",
+      "overview": "Directed by Anthony Russo; Joe Russo ",
+      "posterPath": "../images/avengers_infinity_war.jpg"
+    }
+  ]
+}

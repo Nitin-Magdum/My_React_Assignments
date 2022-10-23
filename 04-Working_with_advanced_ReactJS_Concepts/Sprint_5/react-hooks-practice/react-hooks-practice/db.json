@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "BookName": "The Backyard Astronomer's Guide",
+      "BookAuthor": "Terence Dickinson, Alan Dyer",
+      "Genre": "Science",
+      "Availability": "Yes",
+      "PublishedDate": "2022-07-12",
+      "id": 1
+    },
+    {
+      "BookName": "The Secret World of Stargazing",
+      "BookAuthor": "Adrian West",
+      "Genre": "Science",
+      "Availability": "10",
+      "PublishedDate": "2022-07-15",
+      "id": 2
+    },
+    {
+      "BookName": "Moongazing",
+      "BookAuthor": " Tom Kerss",
+      "Genre": "Science",
+      "Availability": "yes",
+      "PublishedDate": "2022-07-28",
+      "id": 3
+    }
+  ]
+}
